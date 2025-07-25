@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Restaurant - Smart Food Ordering</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <h1>AI Restaurant</h1>
+            </div>
+            <p class="tagline">Powered by AI - Just tell us what you want!</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Order Section -->
+            <section class="order-section">
+                <div class="order-card">
+                    <h2><i class="fas fa-robot"></i> Place Your Order</h2>
+                    <p class="description">Tell our AI what you'd like to eat, and we'll check availability instantly!</p>
+                    
+                    <div class="order-form">
+                        <div class="input-group">
+                            <textarea 
+                                id="orderInput" 
+                                placeholder="e.g., I'd like a burger and some wings, also a coke please..."
+                                rows="3"
+                            ></textarea>
+                            <button id="orderBtn" class="order-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Check Availability
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div id="loading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>AI is checking your order...</p>
+                    </div>
+
+                    <!-- Order Result -->
+                    <div id="orderResult" class="order-result hidden">
+                        <div class="result-content">
+                            <div class="status-badge" id="statusBadge"></div>
+                            <p id="aiMessage" class="ai-message"></p>
+                            
+                            <div id="itemsFound" class="items-section hidden">
+                                <h3><i class="fas fa-check-circle"></i> Items Found</h3>
+                                <div id="foundItemsList" class="items-list"></div>
+                                <div class="total-price">
+                                    <strong>Total: $<span id="totalPrice">0.00</span></strong>
+                                </div>
+                            </div>
+
+                            <div id="suggestions" class="items-section hidden">
+                                <h3><i class="fas fa-lightbulb"></i> Suggestions</h3>
+                                <div id="suggestionsList" class="items-list"></div>
+                            </div>
+
+                            <button id="newOrderBtn" class="new-order-btn hidden">
+                                <i class="fas fa-plus"></i>
+                                Place Another Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Menu Section -->
+            <section class="menu-section">
+                <div class="menu-card">
+                    <h2><i class="fas fa-list"></i> Our Menu</h2>
+                    <p class="description">Browse our full menu with real-time availability</p>
+                    
+                    <div id="menuContainer" class="menu-container">
+                        <div class="loading-menu">
+                            <div class="spinner"></div>
+                            <p>Loading menu...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 AI Restaurant. Powered by artificial intelligence.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
