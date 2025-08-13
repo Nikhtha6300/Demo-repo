@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore Kruti</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">Kruti</div>
+      <nav class="nav">
+        <a class="nav-item" href="#" aria-label="New Chat">
+          <span class="icon">＋</span>
+          <span class="label">New Chat</span>
+        </a>
+        <a class="nav-item" href="#" aria-label="Search Chats">
+          <span class="icon">🔎</span>
+          <span class="label">Search Chats</span>
+        </a>
+        <a class="nav-item" href="#" aria-label="Library">
+          <span class="icon">📚</span>
+          <span class="label">Library</span>
+        </a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="user">
+        <div class="avatar" aria-hidden="true">N</div>
+        <div class="user-meta">
+          <div class="user-name">niki</div>
+          <div class="user-plan">free</div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="page-header">
+        <h1>Explore Kruti</h1>
+        <p class="subtitle">Discover and create custom versions of Kruti that combine instructions, extra knowledge, and any combination of skills.</p>
+      </header>
+
+      <div class="search-row">
+        <div class="search">
+          <span class="search-icon">🔎</span>
+          <input id="searchInput" type="text" placeholder="Search Kruti" aria-label="Search Kruti" />
+        </div>
+      </div>
+
+      <div class="chips" role="tablist" aria-label="Categories">
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true">Top Picks</button>
+        <button class="chip" data-filter="Writing" role="tab">Writing</button>
+        <button class="chip" data-filter="Productivity" role="tab">Productivity</button>
+        <button class="chip" data-filter="Research & Analysis" role="tab">Research & Analysis</button>
+        <button class="chip" data-filter="Education" role="tab">Education</button>
+        <button class="chip" data-filter="Lifestyle" role="tab">Lifestyle</button>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Featured</h2>
+        <div class="card-grid">
+          <article class="card" data-tags="Writing, Productivity, Top Picks" data-title="Write For Me">
+            <div class="card-icon" style="--icon-bg:#EDE9FE;--icon-fg:#6D28D9">✍️</div>
+            <div class="card-body">
+              <h3 class="card-title">Write For Me</h3>
+              <p class="card-desc">Supercharged writing assistant</p>
+            </div>
+          </article>
+
+          <article class="card" data-tags="Research & Analysis, Education, Top Picks" data-title="Scholar Kruti">
+            <div class="card-icon" style="--icon-bg:#EEF2FF;--icon-fg:#4F46E5">🎓</div>
+            <div class="card-body">
+              <h3 class="card-title">Scholar Kruti</h3>
+              <p class="card-desc">Enhance research with 200M+ resources</p>
+            </div>
+          </article>
+
+          <article class="card" data-tags="Productivity, Top Picks" data-title="AI PDF Drive">
+            <div class="card-icon" style="--icon-bg:#E0F2FE;--icon-fg:#0369A1">📄</div>
+            <div class="card-body">
+              <h3 class="card-title">AI PDF Drive</h3>
+              <p class="card-desc">Chat, create, organize PDFs</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Trending</h2>
+        <div class="card-grid">
+          <article class="card" data-tags="Lifestyle" data-title="Astrology Birth Chart">
+            <div class="card-icon" style="--icon-bg:#DBEAFE;--icon-fg:#1D4ED8">🔮</div>
+            <div class="card-body">
+              <h3 class="card-title">Astrology Birth Chart</h3>
+              <p class="card-desc">Expert astrologer Kruti</p>
+            </div>
+          </article>
+
+          <article class="card" data-tags="Research & Analysis, Education" data-title="Scholar Kruti">
+            <div class="card-icon" style="--icon-bg:#EEF2FF;--icon-fg:#4F46E5">🎓</div>
+            <div class="card-body">
+              <h3 class="card-title">Scholar Kruti</h3>
+              <p class="card-desc">Enhance research with 200M+ resources</p>
+            </div>
+          </article>
+
+          <article class="card" data-tags="Productivity, Writing" data-title="Marketing Genius">
+            <div class="card-icon" style="--icon-bg:#E0E7FF;--icon-fg:#4338CA">💡</div>
+            <div class="card-body">
+              <h3 class="card-title">Marketing Genius</h3>
+              <p class="card-desc">Boost your brand with AI</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
